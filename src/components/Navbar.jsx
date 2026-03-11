@@ -8,17 +8,17 @@ export default function Navbar() {
     const handleScroll = () => {
       if (window.scrollY > 50) {
         gsap.to(navRef.current, {
-          backgroundColor: 'rgba(5, 5, 5, 0.8)',
-          backdropFilter: 'blur(16px)',
-          borderBottom: '1px solid rgba(230, 59, 46, 0.2)',
+          backgroundColor: 'rgba(255, 255, 255, 0.25)',
+          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255,255,255,0.5)',
           duration: 0.3,
+          ease: 'power2.out'
         });
       } else {
         gsap.to(navRef.current, {
-          backgroundColor: 'transparent',
-          backdropFilter: 'blur(0px)',
-          borderBottom: '1px solid rgba(255, 255, 255, 0)',
+          backgroundColor: 'rgba(255, 255, 255, 0.15)',
+          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255,255,255,0.4)',
           duration: 0.3,
+          ease: 'power2.out'
         });
       }
     };
@@ -28,23 +28,44 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav
-      ref={navRef}
-      className="fixed top-0 left-0 right-0 z-50 flex justify-center py-6 transition-all duration-300 pointer-events-none"
-    >
-      <div className="pointer-events-auto flex items-center justify-between px-8 py-3 rounded-[2rem] w-[90%] max-w-6xl bg-transparent transition-colors duration-300">
-        <div className="text-xl font-sans font-bold text-background tracking-tight">
-          RavenDOS
+    <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-5 px-6 pointer-events-none">
+      <div
+        ref={navRef}
+        className="pointer-events-auto flex items-center justify-between px-8 py-3.5 w-full max-w-6xl transition-all duration-300"
+        style={{
+          backgroundColor: 'rgba(255, 255, 255, 0.15)',
+          backdropFilter: 'blur(24px) saturate(200%)',
+          WebkitBackdropFilter: 'blur(24px) saturate(200%)',
+          borderRadius: '20px',
+          border: '1px solid rgba(255, 255, 255, 0.35)',
+          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255,255,255,0.4)',
+        }}
+      >
+        {/* Logo */}
+        <div className="text-lg font-sans font-bold tracking-tight">
+          <span className="text-primary">Raven</span>
+          <span className="text-accent">DOS</span>
         </div>
-        <div className="hidden md:flex gap-8 items-center text-sm font-sans font-semibold text-background/80 tracking-wide">
-          <a href="#capabilities" className="hover:text-accent transition-colors hover-lift">Capabilities</a>
-          <a href="#products" className="hover:text-accent transition-colors hover-lift">Products</a>
-          <a href="#vision" className="hover:text-accent transition-colors hover-lift">Vision</a>
-          <a href="#technology" className="hover:text-accent transition-colors hover-lift">Technology</a>
+
+        {/* Navigation Links */}
+        <div className="hidden md:flex gap-8 items-center text-sm font-sans font-medium">
+          <a href="#capabilities" className="text-primary/70 hover:text-primary transition-colors duration-200">
+            Capabilities
+          </a>
+          <a href="#products" className="text-primary/70 hover:text-primary transition-colors duration-200">
+            Products
+          </a>
+          <a href="#vision" className="text-primary/70 hover:text-primary transition-colors duration-200">
+            Vision
+          </a>
+          <a href="#technology" className="text-primary/70 hover:text-primary transition-colors duration-200">
+            Technology
+          </a>
         </div>
-        <button className="magnetic-btn bg-accent text-primary px-6 py-2.5 rounded-full font-sans font-semibold text-sm hover:brightness-110 flex items-center justify-center overflow-hidden relative group">
-          <span className="relative z-10 transition-transform duration-300 group-hover:-translate-y-10">Contact Us</span>
-          <span className="absolute inset-0 flex items-center justify-center z-10 translate-y-10 group-hover:translate-y-0 transition-transform duration-300 text-primary">Contact Us</span>
+
+        {/* CTA Button */}
+        <button className="px-5 py-2.5 rounded-xl font-sans font-semibold text-sm bg-primary text-white hover:bg-primary/90 transition-all duration-200">
+          Contact Us
         </button>
       </div>
     </nav>

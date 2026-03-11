@@ -27,7 +27,10 @@ export default function Products() {
   }, []);
 
   return (
-    <section id="products" ref={containerRef} className="py-24 px-6 md:px-12 max-w-7xl mx-auto w-full relative z-10">
+    <section id="products" ref={containerRef} className="pt-8 pb-24 px-6 md:px-12 max-w-7xl mx-auto w-full relative z-10">
+      <div className="product-content mb-8 text-center">
+        <h2 className="font-sans font-bold text-lg tracking-widest text-accent uppercase">Products</h2>
+      </div>
       <div className="product-content glass-panel p-1 border border-white/5 rounded-[3rem] bg-dark/20 backdrop-blur-xl relative overflow-hidden">
         
         {/* Subtle noise over the card */}
@@ -36,10 +39,6 @@ export default function Products() {
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden rounded-[2.8rem]">
           {/* Content side */}
           <div className="p-12 md:p-16 flex flex-col justify-center bg-primary/95">
-            <span className="font-mono text-accent text-xs tracking-widest uppercase mb-4 font-bold flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
-              Featured Product
-            </span>
             <h2 className="font-sans font-bold text-4xl md:text-5xl text-background mb-6">IntiGrade</h2>
             <p className="font-sans text-background/70 text-lg leading-relaxed mb-8 max-w-lg">
               AI-powered academic evaluation and grading platform designed to modernize assessment systems and improve educational analytics.
@@ -58,10 +57,15 @@ export default function Products() {
             </div>
 
             <div>
-              <button className="magnetic-btn border border-white/10 bg-white/5 hover:bg-white/10 text-background px-8 py-3.5 rounded-full font-sans font-semibold text-sm tracking-wide flex items-center gap-2 transition-colors">
+              <a
+                href="https://intigrade.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="magnetic-btn border border-white/10 bg-white/5 hover:bg-white/10 text-background px-8 py-3.5 rounded-full font-sans font-semibold text-sm tracking-wide flex items-center gap-2 transition-colors"
+              >
                 Learn More
                 <ChevronRight className="w-4 h-4 text-accent" />
-              </button>
+              </a>
             </div>
           </div>
 

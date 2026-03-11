@@ -129,7 +129,6 @@ function InteractiveBackground() {
 
 export default function Hero() {
   const heroRef = useRef(null);
-  const eyebrowRef = useRef(null);
   const title1Ref = useRef(null);
   const title2Ref = useRef(null);
   const subtextRef = useRef(null);
@@ -140,12 +139,6 @@ export default function Hero() {
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
       tl.fromTo(
-        eyebrowRef.current,
-        { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8 },
-        0.2
-      )
-      .fromTo(
         [title1Ref.current, title2Ref.current],
         { y: 40, opacity: 0 },
         { y: 0, opacity: 1, duration: 1, stagger: 0.1 },
@@ -178,16 +171,11 @@ export default function Hero() {
       <div className="w-full max-w-6xl mx-auto px-6" style={{ position: 'relative', zIndex: 1 }}>
         {/* Centered Content */}
         <div className="flex flex-col items-center text-center">
-          {/* Eyebrow */}
-          <div ref={eyebrowRef} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 text-accent font-mono text-xs font-semibold uppercase tracking-wider mb-8">
-            <div className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></div>
-            AI-Powered Solutions
-          </div>
-
           {/* Headlines */}
           <h1 className="flex flex-col gap-2">
             <span ref={title1Ref} className="font-sans font-bold text-5xl md:text-6xl lg:text-7xl text-primary tracking-tight leading-[1.1]">
               RavenDOS
+              <span className="block font-sans font-normal text-sm tracking-normal mt-1" style={{ color: '#000000' }}>(Formerly DevAI)</span>
             </span>
             <span
               ref={title2Ref}

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
-export default function Navbar() {
+export default function Navbar({ onContactClick }) {
   const navRef = useRef(null);
 
   useEffect(() => {
@@ -64,7 +64,7 @@ export default function Navbar() {
         </div>
 
         {/* CTA Button */}
-        <button className="px-5 py-2.5 rounded-xl font-sans font-semibold text-sm bg-primary text-white hover:bg-primary/90 transition-all duration-200">
+        <button onClick={onContactClick} className="px-5 py-2.5 rounded-xl font-sans font-semibold text-sm bg-primary text-white hover:bg-primary/90 transition-all duration-200">
           Contact Us
         </button>
       </div>

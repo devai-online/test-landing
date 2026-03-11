@@ -6,25 +6,25 @@ gsap.registerPlugin(ScrollTrigger);
 
 const testimonials = [
   {
-    quote: "RavenDOS transformed our infrastructure from the ground up. Their team delivered an AI-powered platform that cut our processing time by 60% — well ahead of schedule.",
-    name: "Sarah Mitchell",
-    role: "Chief Technology Officer",
-    company: "Nexvault Financial",
-    initials: "SM",
+    quote: "RavenDOS built our entire web presence from scratch and delivered beyond our expectations. Their attention to detail and technical execution gave WebRocket the digital foundation we needed to grow.",
+    name: "Sunil Pachigolla",
+    role: "CEO",
+    company: "WebRocket",
+    initials: "SP",
   },
   {
-    quote: "We had persistent security vulnerabilities that no one else could solve. RavenDOS came in, audited everything, and built a zero-trust network that's been rock solid ever since.",
-    name: "James Okafor",
-    role: "IT Director",
-    company: "Meridian Health Group",
-    initials: "JO",
+    quote: "Managing diagnostic data across our centres was a constant challenge. RavenDOS stepped in and built a system that streamlined everything — our operations are significantly more efficient now.",
+    name: "Seetha Soumya",
+    role: "Director",
+    company: "Diagnostic Wale",
+    initials: "SS",
   },
   {
-    quote: "Our old dashboard was a nightmare. RavenDOS rebuilt the entire analytics layer — now our team actually uses it. The insights we're getting have directly shaped our product roadmap.",
-    name: "Priya Sharma",
-    role: "Chief Executive Officer",
-    company: "Loopstack Technologies",
-    initials: "PS",
+    quote: "RavenDOS helped us modernise our internal systems and brought a level of professionalism we hadn't experienced before. They understood our requirements and delivered exactly what we needed.",
+    name: "Sathyanarayana Raju",
+    role: "Director",
+    company: "Sai ChitFunds",
+    initials: "SR",
   },
 ];
 

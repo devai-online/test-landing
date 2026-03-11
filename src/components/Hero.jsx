@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { ChevronRight, ArrowRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 
 // Interactive Gradient Orbs Background
 function InteractiveBackground() {
@@ -127,7 +127,7 @@ function InteractiveBackground() {
   );
 }
 
-export default function Hero() {
+export default function Hero({ onContactClick }) {
   const heroRef = useRef(null);
   const title1Ref = useRef(null);
   const title2Ref = useRef(null);
@@ -196,15 +196,11 @@ export default function Hero() {
             Building AI-powered platforms and scalable software infrastructure designed to solve real-world problems.
           </p>
 
-          {/* CTAs */}
-          <div ref={ctaRef} className="mt-10 flex flex-col sm:flex-row gap-4">
-            <button className="group px-8 py-4 rounded-xl font-sans font-semibold text-base bg-accent text-white hover:bg-accent/90 transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-accent/20">
+          {/* CTA */}
+          <div ref={ctaRef} className="mt-10">
+            <button onClick={onContactClick} className="group px-8 py-4 rounded-xl font-sans font-semibold text-base bg-accent text-white hover:bg-accent/90 transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-accent/20">
               Get Started
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="px-8 py-4 rounded-xl font-sans font-semibold text-base bg-transparent border-2 border-primary/10 text-primary hover:border-primary/20 hover:bg-primary/5 transition-all duration-200 flex items-center justify-center gap-2">
-              Book a Demo
-              <ArrowRight className="w-5 h-5" />
             </button>
           </div>
 

@@ -17,7 +17,7 @@ function App() {
     <main className="w-full min-h-screen bg-primary text-background overflow-hidden relative font-sans">
       {contactOpen && <ContactModal onClose={() => setContactOpen(false)} />}
       <Navbar onContactClick={() => setContactOpen(true)} />
-      <Hero />
+      <Hero onContactClick={() => setContactOpen(true)} />
 
       <Capabilities />
       <Products />

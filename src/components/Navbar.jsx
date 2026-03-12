@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import logo from '../../assets/RavenDOS final-01.png';
 
 export default function Navbar({ onContactClick }) {
   const navRef = useRef(null);
@@ -42,10 +43,7 @@ export default function Navbar({ onContactClick }) {
         }}
       >
         {/* Logo */}
-        <div className="text-lg font-sans font-bold tracking-tight">
-          <span className="text-primary">Raven</span>
-          <span className="text-accent">DOS</span>
-        </div>
+        <img src={logo} alt="RavenDOS" className="h-8 w-auto object-contain" />
 
         {/* Navigation Links */}
         <div className="hidden md:flex gap-8 items-center text-sm font-sans font-medium">

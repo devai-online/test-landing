@@ -1,4 +1,5 @@
 import { ArrowUpRight } from 'lucide-react';
+import logo from '../../assets/RavenDOS final-02.png';
 
 export default function Footer({ onContactClick }) {
   return (
@@ -12,7 +13,7 @@ export default function Footer({ onContactClick }) {
         {/* Brand & Status */}
         <div className="flex flex-col gap-6 max-w-sm">
           <div>
-            <h2 className="font-sans font-bold text-3xl text-background">RavenDOS</h2>
+            <img src={logo} alt="RavenDOS" className="h-20 w-auto object-contain" />
             {/* Social icons */}
             <div className="flex items-center gap-3 mt-4">
               {[

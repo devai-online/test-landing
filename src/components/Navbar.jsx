@@ -32,7 +32,7 @@ export default function Navbar({ onContactClick }) {
     <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-5 px-6 pointer-events-none">
       <div
         ref={navRef}
-        className="pointer-events-auto flex items-center justify-between px-8 py-3.5 w-full max-w-6xl transition-all duration-300"
+        className="pointer-events-auto flex items-center justify-center md:justify-between px-8 py-3.5 w-full max-w-6xl transition-all duration-300"
         style={{
           backgroundColor: 'rgba(255, 255, 255, 0.15)',
           backdropFilter: 'blur(24px) saturate(200%)',
@@ -62,7 +62,7 @@ export default function Navbar({ onContactClick }) {
         </div>
 
         {/* CTA Button */}
-        <button onClick={onContactClick} className="px-5 py-2.5 rounded-xl font-sans font-semibold text-sm bg-primary text-white hover:bg-primary/90 transition-all duration-200">
+        <button onClick={onContactClick} className="hidden md:block px-5 py-2.5 rounded-xl font-sans font-semibold text-sm bg-primary text-white hover:bg-primary/90 transition-all duration-200">
           Contact Us
         </button>
       </div>
